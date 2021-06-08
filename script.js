@@ -42,5 +42,32 @@ function updateRecords(records, id, prop, value) {
     return records;
 }
 
+/* artist should be the string ABBA */
 let result = updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+console.log(result);
+
+/* tracks should have the string "Take a Chance on Me" as the last element.*/
+result = updateRecords(recordCollection, 5439, "tracks", "Take a Chance on Me");
+console.log(result);
+
+// artist should not be set
+result = updateRecords(recordCollection, 2548, "artist", "");
+console.log(result);
+
+/* tracks should have the string
+ * "Addicted to Love"
+ * as the last element. */
+result = updateRecords(recordCollection, 1245, "tracks", "Addicted to Love");
+console.log(result);
+
+// Tracks should have the string 1999 as the first element.
+result = updateRecords(recordCollection, 2468, "tracks", "Free");
+console.log(result);
+
+// tracks should not be set
+result = updateRecords(recordCollection, 2548, "tracks", "");
+console.log(result);
+
+// albumTitle should be the string "Riptide"
+result = updateRecords(recordCollection, 1245, "albumTitle", "Riptide");
 console.log(result);
